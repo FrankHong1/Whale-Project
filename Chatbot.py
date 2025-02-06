@@ -3,6 +3,8 @@ import os
 
 client = OpenAI(api_key = os.getenv("OPENAI_API_KEY"))
 
+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
+
 def reply(response):
   reply = response.choices[0].message.content
   return reply
