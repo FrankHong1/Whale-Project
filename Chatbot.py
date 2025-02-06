@@ -23,7 +23,7 @@ def chatting():
       break
     msg_history.append({"role": "user", "content": user_msg})
     response = client.chat.completions.create(
-        model="gpt-4o-realtime-preview",
+        model="gpt-4o-realtime-preview-2024-12-17",
         #model = "model-ID"
         messages=msg_history)
     ext_reply = reply(response)
