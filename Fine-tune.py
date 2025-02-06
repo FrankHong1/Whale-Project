@@ -18,7 +18,7 @@ def upload_data(file_path):
 
 def fine_tune(raw_data_ID):
   response = client.FineTune.create(training_file = raw_data_ID,
-                                   model = 'gpt-4o')
+                                   model = 'gpt-4o-realtime-preview')
   fine_tune_ID = response['id']
   return fine_tune_ID
 
