@@ -2,7 +2,7 @@ from openai import OpenAI
 import os
 import time
 
-#client = OpenAI(api_key = os.getenv("OPENAI_API_KEY"))
+client = OpenAI(api_key = os.getenv("OPENAI_API_KEY"))
 
 
 def upload_data(file_path):
