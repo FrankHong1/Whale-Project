@@ -59,6 +59,11 @@ ENV/
 .venv/
 env313/
 
-
 #  PyCharm/IntelliJ
 .idea
+
+#Fine tune data
+fine_tune_data/
+
+#Transcription files
+transcriptions/
