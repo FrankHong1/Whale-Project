@@ -8,6 +8,7 @@ role = 'system'
 modified_lines = []
 
 def json_line_filter(infile_loc, outfile_loc, filter_role):
+
     with open(infile_loc, 'r', encoding = 'utf-8') as infile:
         for lines in infile:
             #Adding an error handling mechanism
@@ -25,7 +26,7 @@ def json_line_filter(infile_loc, outfile_loc, filter_role):
 
                 #Re-format in the json form and convert the python object back to a json string
                 filtered_message = {"messages": filtered_message}
-                modified_line = json.dumps(filtered_message.strip(), ensure_ascii=False)
+                modified_line = json.dumps(filtered_message, ensure_ascii=False)
                 modified_lines.append(modified_line)
 
             except json.JSONDecodeError:
@@ -36,6 +37,7 @@ def json_line_filter(infile_loc, outfile_loc, filter_role):
         #Write the processed json lines to the outfile location
         for lines in modified_lines:
             outfile.write(lines.strip() + '\n')
+        print(f'The processed jsonl file is successfully generated and stored at: {outfile_loc}')
 
     #To end the script
     return None
